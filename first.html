@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+	First Assignment
+</title>
+	
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<th>TICKER</th>
+			<th>PRICE</th>
+		</tr>
+		<tr>
+			<td>WIPRO</td>
+			<td>298.45</td>
+		</tr>
+		<tr>
+			<td>INFY</td>
+			<td>949.95</td>
+		</tr>
+		<tr>
+			<td>TCS</td>
+			<td>2713.70</td>
+		</tr>
+		<tr>
+			<td>TECHM</td>
+			<td>485.85</td>
+		</tr>
+	</table>
+	<h1>Stock Trading</h1>
+	
+	<form onsubmit="validate()">
+		Ticker :<input type="text"/>
+		Quantity :<input type="number" id="quan"/>
+		<input type="submit" value="SUBMIT"/>
+	</form>
+	<script>
+		function validate()
+		{
+			var q=document.getElementById("quan").value;
+			if(q==="")
+			{
+				alert("Please Enter a valid number in Quantity");
+				return false;
+			}
+			else if(q<10 || q>100)
+			{
+				alert("Quantity range is 10 to 100");
+				return false;			
+			}
+			else if(q%10!=0)
+			{
+				alert("Quantity should be multiple of 10");
+				return false;			
+			}
+			return true;
+		
+		}
+	</script>
+</body>
+</html>

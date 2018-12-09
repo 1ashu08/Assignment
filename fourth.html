@@ -1,0 +1,68 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <style>
+	#myChart{
+
+		  width:600px !important;
+		  height:250px !important;
+
+		}
+	
+	.row{height:100%;width:100%}
+	.row1{height:50%;width:100%}
+	.row2{height:50%;width:100%}
+    </style>
+</head>
+<body>
+    <div class="box">
+		<h1>Board of Control for Cricket in India</h1>
+		<h2>Statistics of T20</h2>	
+	    <div class="row1">
+
+	    	<canvas id="myChart" style="border:1px solid;float:left">
+		</canvas>
+
+
+	    </div>
+	   
+    </div>
+    <script>
+		var canvas = document.getElementById("myChart");
+		
+		var data= {
+		    label: "",
+		    data: [0,40,75,140],
+		    lineTension: 0.3,
+		    fill: false,
+		    borderColor: 'red',
+		    
+		  };
+
+		var chartData = {
+		  labels: ["0 Over","5 Over", "10 Over", "15 Over"],
+		  datasets: [data]
+		};
+
+		var chartOptions = {
+		  responsive: true,
+    		  maintainAspectRatio:false,
+		  legend: {
+		    display: true,
+		    position: 'top',
+		    labels: {
+		      //boxWidth: 80,
+		      fontColor: 'black'
+		    }
+		  }
+		};
+
+		var lineChart = new Chart(canvas, {
+		  type: 'line',
+		  data: chartData,
+		  options: chartOptions
+		});
+    </script>
+</body>
+</html>
+

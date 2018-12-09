@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>
+	Second Assignment
+</title>
+	
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td>Xena Events</td>
+			<td><img src="topgear_logo.png" height="100px" width="100px"/></td>
+		</tr>
+		
+	</table>
+	<h1>Xena Events</h1>
+	
+	<form onsubmit="validate()">
+		Name :<input type="text" id="name" />
+		Age :<input type="number" id="age" />
+		Email :<input type="email" id="mail" />
+		City :<input list="cities" id="city" />
+
+		 <datalist id="cities">
+		    <option value="Rajkot">
+		    <option value="Vizag">
+		    <option value="Bangalore">
+		 </datalist>	
+		<input type="submit" value="SUBMIT"/>
+	</form>
+	<script>
+		function validate()
+		{
+			var name=document.getElementById("name").value;
+			var age=document.getElementById("age").value;
+			var email=document.getElementById("mail").value;
+			var city=document.getElementById("city").value;
+			console.log(age+"    "+name);
+			if(name==="" || age==="" || email==="" || city==="")
+			{
+				alert("Field cannot be blank");
+				return false;
+			}
+			else if(age>=18)
+			{
+				alert("Age should be greater than or equal to 18");
+				return false;			
+			}
+			return true;
+		
+		}
+	</script>
+</body>
+</html>

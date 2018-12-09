@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>
+	Third Assignment
+</title>
+<style>
+	.container{width:100%;height:100%;}
+	.row1{width:100%;height:30%}
+	.row2{width:100%;height:70%}	
+</style>	
+</head>
+<body>
+	<div class="container">
+	<div class="row1">
+	<table border="1px">
+		<tr>
+			<td>Awesome Online videos</td>
+			<td><img src="topgear_logo.png" height="100px" width="100px"/></td>
+		</tr>
+		
+	</table>
+	</div>
+	<div class="row2">
+		  
+		  
+		  <video id="video" width="420">
+		    <source src="abc.mp4" type="video/mp4">
+		     video not supported.
+		  </video><br><br>
+		  <button onclick="play()">Play</button> 
+		  <button onclick="pause()">Pause</button> 
+	</div>
+	<script>
+		var vid=document.getElementById("video");
+		function play() { 
+		  if (vid.paused) 
+		    vid.play();  
+		}
+		function pause() { 
+		  if (vid.paused) 
+		        ; 
+		  else  
+		    vid.pause(); 
+		} 
+	</script>
+	</div>
+</body>
+</html>
